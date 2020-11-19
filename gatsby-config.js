@@ -15,12 +15,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`jobs`],
+        contentTypes: [`albums`, `links`, `jobs`, `social-links`],
+        singleTypes: [`menu-links`, `hero`],
       },
     },
     `gatsby-plugin-sitemap`,
